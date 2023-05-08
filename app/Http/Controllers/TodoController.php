@@ -84,9 +84,9 @@ class TodoController extends Controller
                 ->resize(150, 150, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(storage_path('app/public/images/') . 'preview/' . $image_name);
+                ->save(storage_path('app/public/images/') . '/preview_' . $image_name);
 
-            $path_preview = 'public/images/preview/' . $image_name;
+            $path_preview = 'public/images/preview_' . $image_name;
         }
 
         // Сохраняем элемент списка
@@ -145,9 +145,9 @@ class TodoController extends Controller
                 ->resize(150, 150, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(storage_path('app/public/images/') . 'preview/' . $image_name);
+                ->save(storage_path('app/public/images/') . 'preview_' . $image_name);
 
-            $path_preview = 'public/images/preview/' . $image_name;
+            $path_preview = 'public/images/preview_' . $image_name;
 
             $todo->path_to_file = $path;
             $todo->path_to_file_preview = $path_preview;
